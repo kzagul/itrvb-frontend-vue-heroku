@@ -3,7 +3,8 @@ import axios from 'axios';
 // http://localhost:3002/api/users
 // 'http://localhost:8080/api/auth/'
 
-const API_URL = 'http://localhost:8086/api/auth/';
+// const API_URL = 'http://localhost:8083/api/auth/';
+const API_URL = 'https://kzagul-core.herokuapp.com/api/auth/';
 
 class AuthService {
   login(user) {
