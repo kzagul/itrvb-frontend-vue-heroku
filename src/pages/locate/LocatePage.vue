@@ -7,7 +7,7 @@
 
     <LocateTable />
 
-    <div v-if="showAdminBoard" class="nav-item">
+    <!-- <div v-if="showAdminBoard" class="nav-item"> -->
 
           <div id="button" class="text-center">
               <router-link :to="'/register-new-locate'" exact style="text-decoration: none; color: inherit;">
@@ -20,7 +20,7 @@
               </router-link>
           </div>
 
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 a

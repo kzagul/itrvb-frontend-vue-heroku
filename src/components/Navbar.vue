@@ -20,7 +20,7 @@
 
             
 
-            <div class="text-center">
+            <div class="text-center" v-if="currentUser && showAdminBoard">
                 <v-menu offset-y>
                     <template v-slot:activator="{ on, attrs }">
                         <v-btn v-bind="attrs" v-on="on" class="ma-1" large color="#000000" plain>
