@@ -225,7 +225,7 @@ export default {
         deleteItemConfirm () {
             const deleteLocate = this.locates[this.selectedItemIndex]
             axios
-                .delete(`http://localhost:8086/api/locate/${deleteLocate.id}`)
+                .delete(`https://kzagul-core.herokuapp.com/api/locate/${deleteLocate.id}`)
                 .then(response => {
                     this.locates.splice(this.selectedItemIndex, 1)
                     this.closeDelete()
@@ -246,7 +246,7 @@ export default {
 
     mounted() {
         axios
-            .get('http://localhost:8086/api/locate/')
+            .get('https://kzagul-core.herokuapp.com/api/locate/')
             .then(response => {
                 this.locates = response.data
                 console.log(response.data)

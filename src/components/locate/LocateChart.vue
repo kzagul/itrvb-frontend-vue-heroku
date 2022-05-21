@@ -120,7 +120,7 @@ export default {
   
    mounted() {
         axios
-            .get('http://localhost:8086/api/locate/')
+            .get('https://kzagul-core.herokuapp.com/api/locate/')
             .then(response => {
                 this.jsonChart = response.data
                  console.log(this.jsonChart)

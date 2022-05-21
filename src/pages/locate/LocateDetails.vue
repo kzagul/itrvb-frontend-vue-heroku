@@ -45,7 +45,7 @@ export default {
     methods: {
         fetchData() {
             axios
-                .get(`http://localhost:8086/api/locate/${this.$route.params.id}`)
+                .get(`https://kzagul-core.herokuapp.com/api/locate/${this.$route.params.id}`)
                 .then(response => {
                     this.locate = response.data[0]
                     console.log(response.data)

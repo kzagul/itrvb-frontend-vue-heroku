@@ -107,7 +107,7 @@ export default {
         save() {
                 axios({
                     method: "post",
-                    url: "http://localhost:8086/api/locate/",
+                    url: "https://kzagul-core.herokuapp.com/api/locate/",
                     data: this.editedItem,
                 })
                 .then(response => {

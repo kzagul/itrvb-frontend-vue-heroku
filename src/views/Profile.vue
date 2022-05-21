@@ -7,7 +7,7 @@
 
           <header class="jumbotron">
       <h3>
-        <strong>{{currentUser.username}}</strong> Profile
+        <strong>{{currentUser.username}}</strong>
       </h3>
     </header>
           <v-card-text>
@@ -32,7 +32,7 @@
               <strong>Email:</strong>
               {{currentUser.email}}
             </p>
-            <strong>Authorities:</strong>
+            <strong>Роль:</strong>
             <ul>
               <li v-for="(role,index) in currentUser.roles" :key="index">{{role}}</li>
             </ul>

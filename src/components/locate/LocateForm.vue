@@ -128,7 +128,7 @@ export default {
             if(this.registration){
                 axios({
                     method: "post",
-                    url: "http://localhost:8086/api/locate/",
+                    url: "https://kzagul-core.herokuapp.com/api/locate/",
                     data: this.editedItem,
                     })
                 .then(response => {
@@ -147,7 +147,7 @@ export default {
                 const id = this.$route.params.id
                 axios({
                     method: "put",
-                    url: `http://localhost:8086/api/locate/${id}`,
+                    url: `https://kzagul-core.herokuapp.com/api/locate/${id}`,
                     data: this.editedItem,
                 })
                 .then(response => {
@@ -167,7 +167,7 @@ export default {
     created(){
         if(this.edit) {
             axios
-                .get(`http://localhost:8086/api/locate/${this.$route.params.id}`)
+                .get(`https://kzagul-core.herokuapp.com/api/locate/${this.$route.params.id}`)
                 .then(response => {
                     this.locate = response.data[0]
                     this.editedItem = this.locate
