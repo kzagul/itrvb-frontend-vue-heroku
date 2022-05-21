@@ -186,7 +186,7 @@ img {
     },
     showAdminBoard() {
       if (this.currentUser && this.currentUser.roles) {
-        return this.currentUser.roles.includes('ROLE_ADMIN');
+        return this.currentUser.roles.includes('ADMIN');
       }
 
       return false;
