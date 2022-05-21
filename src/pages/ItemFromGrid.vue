@@ -21,7 +21,21 @@
                     <v-card-text>
                         <v-text-field :value=items.id label="ID" readonly></v-text-field>
                         <v-text-field :value=items.name label="Наименование" readonly></v-text-field>
-                        {{items.about}}
+                        <v-text-field :value=items.classificationnumber label="Классификационный номер" readonly></v-text-field>
+                        <h4>{{items.about}}</h4>
+                        <v-divider></v-divider>
+                        <h5>{{'Адрес'}}</h5>
+                        <v-text-field :value=items.address label="Адрес" readonly></v-text-field>
+                        <v-divider></v-divider>
+                        <h5>{{'Директор'}}</h5>
+                        <v-text-field :value=items.fullname label="Директор" readonly></v-text-field>
+                        <v-divider></v-divider>
+                        <h5>{{'Контакты'}}</h5>
+                        <v-text-field :value=items.phonenumber  label="Контакты 1" readonly></v-text-field>
+                        <v-text-field :value=items.phonenumber  label="Контакты 2" readonly></v-text-field>
+
+
+
                     </v-card-text>
                     <v-divider class="mt-12"></v-divider>
                 
