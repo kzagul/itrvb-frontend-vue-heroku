@@ -134,7 +134,7 @@ export default {
         deleteItemConfirm () {
             const deleteTrainer = this.trainers[this.selectedItemIndex]
             axios
-                .delete(`http://localhost:3000/api/trainer/${deleteTrainer.id}`)
+                .delete(`https://kzagul-core.herokuapp.com/api/trainer/${deleteTrainer.id}`)
                 .then(response => {
                     this.trainers.splice(this.selectedItemIndex, 1)
                     this.closeDelete()
@@ -146,7 +146,7 @@ export default {
 
     mounted() {
         axios
-            .get('http://localhost:3000/api/trainer')
+            .get('https://kzagul-core.herokuapp.com/api/trainer')
             .then(response => {
                 this.trainers = response.data
                 console.log(response.data)

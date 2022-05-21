@@ -114,7 +114,7 @@ export default {
         save() {
                 axios({
                     method: "post",
-                    url: "http://localhost:3000/api/trainer",
+                    url: "https://kzagul-core.herokuapp.com/api/trainer",
                     data: this.editedItem,
                 })
                 .then(response => {

@@ -44,7 +44,7 @@ export default {
     methods: {
         fetchData() {
             axios
-                .get(`http://localhost:3000/api/contacts/${this.$route.params.id}`)
+                .get(`https://kzagul-core.herokuapp.com/api/contacts/${this.$route.params.id}`)
                 .then(response => {
                     this.contacts = response.data[0]
                     console.log(response.data)

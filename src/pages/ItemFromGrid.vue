@@ -43,7 +43,7 @@ export default {
     methods: {
         fetchData() {
             axios
-                .get(`http://localhost:3000/api/sportinstitution/${this.$route.params.id}`)
+                .get(`https://kzagul-core.herokuapp.com/api/sportinstitution/${this.$route.params.id}`)
                 .then(response => {
                     this.items = response.data[0]
                     console.log(response.data)

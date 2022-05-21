@@ -127,7 +127,7 @@ export default {
             if(this.registration){
                 axios({
                     method: "post",
-                    url: "http://localhost:3000/api/trainer/",
+                    url: "https://kzagul-core.herokuapp.com/api/trainer/",
                     data: this.editedItem,
                     })
                 .then(response => {
@@ -146,7 +146,7 @@ export default {
                 const id = this.$route.params.id
                 axios({
                     method: "put",
-                    url: `http://localhost:3000/api/trainer/${id}`,
+                    url: `https://kzagul-core.herokuapp.com/api/trainer/${id}`,
                     data: this.editedItem,
                 })
                 .then(response => {
@@ -166,7 +166,7 @@ export default {
     created(){
         if(this.edit) {
             axios
-                .get(`http://localhost:3000/api/trainer/${this.$route.params.id}`)
+                .get(`https://kzagul-core.herokuapp.com/api/trainer/${this.$route.params.id}`)
                 .then(response => {
                     this.trainers = response.data[0]
                     this.editedItem = this.trainers

@@ -130,7 +130,7 @@ export default {
         deleteItemConfirm () {
             const deleteDirector = this.directors[this.selectedItemIndex]
             axios
-                .delete(`http://localhost:3000/api/director/${deleteDirector.id}`)
+                .delete(`https://kzagul-core.herokuapp.com/api/director/${deleteDirector.id}`)
                 .then(response => {
                     this.directors.splice(this.selectedItemIndex, 1)
                     this.closeDelete()
@@ -142,7 +142,7 @@ export default {
 
     mounted() {
         axios
-            .get('http://localhost:3000/api/director')
+            .get('https://kzagul-core.herokuapp.com/api/director')
             .then(response => {
                 this.directors = response.data
                 console.log(response.data)

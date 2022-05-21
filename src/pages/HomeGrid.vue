@@ -165,7 +165,7 @@ export default {
 
     mounted() {
         axios
-            .get('http://localhost:3000/api/sportinstitution')
+            .get('https://kzagul-core.herokuapp.com/api/sportinstitution')
             .then(response => {
                 console.log(response.data);
                 this.cards = response.data

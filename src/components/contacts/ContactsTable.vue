@@ -127,7 +127,7 @@ export default {
         deleteItemConfirm () {
             const deleteContacts = this.contacts[this.selectedItemIndex]
             axios
-                .delete(`http://localhost:3000/api/contacts/${deleteContacts.id}`)
+                .delete(`https://kzagul-core.herokuapp.com/api/contacts/${deleteContacts.id}`)
                 .then(response => {
                     this.contacts.splice(this.selectedItemIndex, 1)
                     this.closeDelete()
@@ -139,7 +139,7 @@ export default {
 
     mounted() {
         axios
-            .get('http://localhost:3000/api/contacts/')
+            .get('https://kzagul-core.herokuapp.com/api/contacts/')
             .then(response => {
                 this.contacts = response.data
                 console.log(response.data)

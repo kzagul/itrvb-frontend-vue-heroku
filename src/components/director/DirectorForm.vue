@@ -120,7 +120,7 @@ export default {
             if(this.registration){
                 axios({
                     method: "post",
-                    url: "http://localhost:3000/api/directors/",
+                    url: "https://kzagul-core.herokuapp.com/api/directors/",
                     data: this.editedItem,
                     })
                 .then(response => {
@@ -139,7 +139,7 @@ export default {
                 const id = this.$route.params.id
                 axios({
                     method: "put",
-                    url: `http://localhost:3000/api/director/${id}`,
+                    url: `https://kzagul-core.herokuapp.com/api/director/${id}`,
                     data: this.editedItem,
                 })
                 .then(response => {
@@ -159,7 +159,7 @@ export default {
     created(){
         if(this.edit) {
             axios
-                .get(`http://localhost:3000/api/director/${this.$route.params.id}`)
+                .get(`https://kzagul-core.herokuapp.com/api/director/${this.$route.params.id}`)
                 .then(response => {
                     this.directors = response.data[0]
                     this.editedItem = this.directors

@@ -39,7 +39,7 @@ export default {
     methods: {
         fetchData() {
             axios
-                .get(`http://localhost:3000/api/director/${this.$route.params.id}`)
+                .get(`https://kzagul-core.herokuapp.com/api/director/${this.$route.params.id}`)
                 .then(response => {
                     this.director = response.data[0]
                     console.log(response.data)
