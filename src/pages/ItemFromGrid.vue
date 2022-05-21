@@ -26,13 +26,15 @@
                         <v-divider></v-divider>
                         <h5>{{'Адрес'}}</h5>
                         <v-text-field :value=items.address label="Адрес" readonly></v-text-field>
+                        <v-text-field :value=items.area label="Район" readonly></v-text-field>
                         <v-divider></v-divider>
                         <h5>{{'Директор'}}</h5>
                         <v-text-field :value=items.fullname label="Директор" readonly></v-text-field>
                         <v-divider></v-divider>
                         <h5>{{'Контакты'}}</h5>
-                        <v-text-field :value=items.phonenumber  label="Контакты 1" readonly></v-text-field>
-                        <v-text-field :value=items.phonenumber  label="Контакты 2" readonly></v-text-field>
+                        <v-text-field :value=items.website  label="Вебсайт" readonly></v-text-field>
+                        <v-text-field :value=items.phonenumber  label="Номер телефона" readonly></v-text-field>
+                        <v-text-field :value=items.vk  label="ВК" readonly></v-text-field>
 
 
 
@@ -57,7 +59,7 @@ export default {
     methods: {
         fetchData() {
             axios
-                .get(`https://kzagul-core.herokuapp.com/api/sportinstitution/${this.$route.params.id}`)
+                .get(`https://kzagul-core.herokuapp.com/api/sportinstitutionfull/${this.$route.params.id}`)
                 .then(response => {
                     this.items = response.data[0]
                     console.log(response.data)
